@@ -188,7 +188,7 @@
         "job-search": {
           "name": "Job Search",
           "enabled": true,
-          "token": "MTUzODY3MzYzMzczNDQzMDcyMA.GQm5kE.ziV9OLkyERFudq4K0xgd3co98X2O6Q-oH-77q0"
+          "token": "THIS_SHOULDN'T_BE_ERE_OOPS"
         },
         "fintech": {
           "token": {
