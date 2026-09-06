@@ -1,0 +1,38 @@
+KELLY ANN BERTOZZI
+Boston, MA | kbertozzi21@gmail.com | 508-274-9195
+linkedin.com/in/kelly-ann-bertozzi | github.com/kellybertozzi
+
+EDUCATION
+University of Massachusetts Boston — BS Computer Science, May 2025
+
+PROJECTS
+Coffee Preferences Form (coffee-form-three.vercel.app)
+Full-stack React/Next.js application with Supabase backend and ML-based coffee recommendation predictor. Responsive multi-step form, client-side validation, deployed on Vercel.
+
+Personal Website (kellybertozzi.github.io)
+Responsive personal portfolio built with React and CSS.
+
+Coffee Preference Predictor (github.com/kellybertozzi/Coffee-Predictor)
+Feed-forward neural network in Python for coffee preference prediction. Data preprocessing, feature encoding, model evaluation.
+
+TECHNICAL SKILLS
+Languages: JavaScript, TypeScript, Python, Java, C, HTML5, CSS3
+Frontend: React.js, Next.js, Redux, RESTful API integration, responsive design, UI/UX
+Backend: Node.js, Supabase, SQL, REST APIs
+Tools: Git/GitHub, Figma, npm, Yarn, VS Code
+OS: Windows, Linux, Ubuntu
+
+EXPERIENCE
+Capeway — Shift Leader | Bourne, MA | June 2026 – Present
+Led shift operations and team performance in fast-paced retail environment.
+Managed cash handling, drawer reconciliation, and transaction accuracy.
+Maintained POS system operations and resolved technical issues.
+Trained new employees on operational procedures and system usage.
+
+Ethos — Product Associate | Boston, MA | Jan 2025 – Jun 2026
+Configured and maintained backend system integrations (METRC/Dutchie), managing API credentials.
+Resolved operational issues supporting reliable day-to-day business processes.
+Diagnosed and resolved hardware/software issues affecting daily operations.
+
+Dunkin' — Shift Leader / Crew Member | Boston, MA | Nov 2019 – May 2025
+Promoted to Shift Leader; led daily operations, mentored staff, maintained accurate order fulfillment.

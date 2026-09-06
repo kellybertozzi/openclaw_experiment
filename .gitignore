@@ -1,0 +1,24 @@
+# Secrets
+.env
+.env.*
+secrets.env
+*.secret
+credentials/
+**/credentials/
+
+# Runtime/state
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+logs/
+cache/
+media/
+devices/
+tui/
+audit/
+crestodian/sessions/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+*.swp

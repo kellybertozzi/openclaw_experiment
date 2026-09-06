@@ -1,0 +1,240 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "/root/.openclaw/workspace",
+      "model": {
+        "primary": "openrouter/free"
+      },
+      "models": {
+        "openrouter/free": {
+          "alias": "OpenRouter Free"
+        }
+      },
+      "memorySearch": {
+        "enabled": false
+      }
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "job-search",
+        "name": "job-search",
+        "workspace": "/root/.openclaw/workspace/job-search",
+        "agentDir": "/root/.openclaw/agents/job-search/agent",
+        "identity": {
+          "name": "Job Search",
+          "emoji": "💼",
+          "theme": "Career strategist, recruiter, and application operator"
+        },
+        "tools": {
+          "alsoAllow": [
+            "browser"
+          ]
+        }
+      },
+      {
+        "id": "fintech",
+        "name": "fintech",
+        "workspace": "/root/.openclaw/workspace/fintech",
+        "agentDir": "/root/.openclaw/agents/fintech/agent",
+        "model": "openrouter/free"
+      },
+      {
+        "id": "job-apply",
+        "name": "job-apply",
+        "workspace": "/root/.openclaw.workspaces/job-apply",
+        "agentDir": "/root/.openclaw/agents/job-apply/agent"
+      }
+    ]
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "password",
+      "password": {
+        "source": "env",
+        "provider": "default",
+        "id": "OPENCLAW_GATEWAY_PASSWORD"
+      }
+    },
+    "port": 18789,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "serve",
+      "resetOnExit": false
+    },
+    "controlUi": {
+      "allowInsecureAuth": true,
+      "allowedOrigins": [
+        "https://server-725023.tail62d040.ts.net"
+      ]
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send",
+        "sms.search"
+      ]
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "profile": "coding",
+    "agentToAgent": {
+      "enabled": true,
+      "allow": [
+        "job-search",
+        "job-apply"
+      ]
+    },
+    "sessions": {
+      "visibility": "all"
+    },
+    "web": {
+      "search": {
+        "provider": "duckduckgo",
+        "enabled": true,
+        "openaiCodex": {}
+      },
+      "fetch": {
+        "enabled": true
+      }
+    }
+  },
+  "wizard": {
+    "securityAcknowledgedAt": "2026-07-27T18:54:19.912Z",
+    "lastRunAt": "2026-08-29T19:43:07.179Z",
+    "lastRunVersion": "2026.7.1-2",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.7.1-2",
+    "lastTouchedAt": "2026-08-29T19:43:07.276Z"
+  },
+  "plugins": {
+    "entries": {
+      "ollama": {
+        "enabled": false
+      },
+      "openrouter": {
+        "enabled": true
+      },
+      "discord": {
+        "enabled": true
+      },
+      "browser": {
+        "enabled": true
+      },
+      "duckduckgo": {
+        "enabled": true
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "OpenRouter": {
+        "apiKey": {
+          "source": "env",
+          "provider": "default",
+          "id": "OPENROUTER_API_KEY"
+        }
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      },
+      "openrouter:manual": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      },
+      "openrouter:second": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      },
+      "openrouter:third": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      }
+    }
+  },
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "guilds": {},
+      "accounts": {
+        "default": {
+          "token": {
+            "source": "env",
+            "provider": "default",
+            "id": "DISCORD_BOT_TOKEN"
+          },
+          "groupPolicy": "allowlist"
+        },
+        "job-search": {
+          "name": "Job Search",
+          "enabled": true,
+          "token": "MTUzODY3MzYzMzczNDQzMDcyMA.GQm5kE.ziV9OLkyERFudq4K0xgd3co98X2O6Q-oH-77q0"
+        },
+        "fintech": {
+          "token": {
+            "source": "env",
+            "provider": "default",
+            "id": "CHAD_DISCORD_BOT_TOKEN"
+          },
+          "enabled": true,
+          "name": "Chad"
+        }
+      }
+    }
+  },
+  "commands": {
+    "ownerAllowFrom": [
+      "discord:1082509227144253522"
+    ]
+  },
+  "bindings": [
+    {
+      "type": "route",
+      "agentId": "main",
+      "match": {
+        "channel": "discord",
+        "accountId": "default"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "job-search",
+      "match": {
+        "channel": "discord",
+        "accountId": "job-search"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "fintech",
+      "match": {
+        "channel": "discord",
+        "accountId": "fintech"
+      }
+    }
+  ],
+  "browser": {
+    "enabled": true,
+    "executablePath": "/usr/bin/google-chrome"
+  }
+}
